@@ -206,10 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ================= AI CHAT BOT LOGIC =================
 
-  // DeepSeek API Config
-  const API_KEY = "sk-f1392fdeb8e54fb79e5b776a35343a53"; // WARNING: Client-side Key Exposure
-  const API_URL = "https://api.deepseek.com/chat/completions";
-
   const systemPrompt = `
       You are the friendly AI waiter for FoodChapChap. 
       We sell:
@@ -290,18 +286,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Show Typing
     showTyping();
 
-    // 3. Call API
+    // 3. Call internal API (hides the key)
     try {
-      const response = await fetch(API_URL, {
+      const endpoint = "/api/chat";
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${API_KEY}`
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: "deepseek-chat",
-          messages: messages,
-          stream: false
+          messages: messages
         })
       });
 
@@ -316,7 +311,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (error) {
       console.error("AI Error:", error);
-      // alert("AI Error Details: " + error.message); // Uncomment for debugging
       messages.push({ role: "assistant", content: "Sorry, my brain froze! 🥶 (Error: " + error.message + ")" });
     }
 
