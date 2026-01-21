@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | FoodChapChap</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/style.css" />
+    <style>
+        .category-nav {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-link {
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: white;
+            color: var(--text-main);
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .cat-link.active,
+        .cat-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .category-header {
+            margin: 3rem 0 2rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-hamburger"></i> FoodChapChap
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header style="background: var(--secondary); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 1rem;">Our Menu</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Freshly prepared, hot, and tasty fast food
+                waiting for you.</p>
+        </div>
+    </header>
+
+    <!-- Menu Content -->
+    <section class="section container">
+        <!-- Category Nav -->
+        <div class="category-nav">
+            <button class="cat-link active" onclick="scrollToCategory('burgers')">Burgers</button>
+            <button class="cat-link" onclick="scrollToCategory('chicken')">Chicken</button>
+            <button class="cat-link" onclick="scrollToCategory('fries')">Fries & Snacks</button>
+            <button class="cat-link" onclick="scrollToCategory('combos')">Combos</button>
+            <button class="cat-link" onclick="scrollToCategory('drinks')">Drinks</button>
+        </div>
+
+        <!-- Burgers -->
+        <div id="burgers">
+            <div class="category-header">
+                <h2>🍔 Burgers</h2>
+            </div>
+            <div class="grid">
+                <!-- Burger 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500"
+                            alt="ChapChap Crunch">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>ChapChap Crunch</h3>
+                            <span class="price">KSh 450</span>
+                        </div>
+                        <p class="card-desc">Crispy chicken fillet, cheese, lettuce, secret sauce.</p>
+                        <button onclick="addToCart('ChapChap Crunch', 450)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Burger 2 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500" alt="Cheesy Beef">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Cheesy Beef Burger</h3>
+                            <span class="price">KSh 500</span>
+                        </div>
+                        <p class="card-desc">Double beef patty, melted cheddar, pickles, onion.</p>
+                        <button onclick="addToCart('Cheesy Beef Burger', 500)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Burger 3 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=500"
+                            alt="The Big Boss">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>The Big Boss</h3>
+                            <span class="price">KSh 750</span>
+                        </div>
+                        <p class="card-desc">XL flame-grilled beef, veggies, mayo on sesame bun.</p>
+                        <button onclick="addToCart('The Big Boss', 750)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chicken -->
+        <div id="chicken">
+            <div class="category-header">
+                <h2>🍗 Chicken</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500"
+                            alt="2pc Chicken + Chips">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>2pc Chicken + Chips</h3>
+                            <span class="price">KSh 490</span>
+                        </div>
+                        <p class="card-desc">Two pieces of crispy fried chicken with regular fries.</p>
+                        <button onclick="addToCart('2pc Chicken + Chips', 490)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1562967960-f554909a2e86?w=500" alt="3pc Meal">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>3pc Meal</h3>
+                            <span class="price">KSh 690</span>
+                        </div>
+                        <p class="card-desc">3 pieces chicken, regular fries + 350ml soda.</p>
+                        <button onclick="addToCart('3pc Meal', 690)" class="btn whatsapp-btn" style="width: 100%">Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1615557960916-5f4791effe9d?w=500" alt="9pc Bucket">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>9pc Bucket</h3>
+                            <span class="price">KSh 1,850</span>
+                        </div>
+                        <p class="card-desc">9 pieces of signature chicken. Good for sharing.</p>
+                        <button onclick="addToCart('9pc Bucket', 1850)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fries & Snacks -->
+        <div id="fries">
+            <div class="category-header">
+                <h2>🍟 Fries & Snacks</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1573080496987-a20242964e52?w=500"
+                            alt="Masala Chips">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Masala Chips</h3>
+                            <span class="price">KSh 300</span>
+                        </div>
+                        <p class="card-desc">Spicy masala seasoned fries, saucy and hot.</p>
+                        <button onclick="addToCart('Masala Chips', 300)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=500" alt="Spicy Wings">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Spicy Wings (6pcs)</h3>
+                            <span class="price">KSh 450</span>
+                        </div>
+                        <p class="card-desc">Golden fried wings tossed in spicy sauce.</p>
+                        <button onclick="addToCart('Spicy Wings', 450)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=500" alt="Onion Rings">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Onion Rings</h3>
+                            <span class="price">KSh 350</span>
+                        </div>
+                        <p class="card-desc">Crispy battered onion rings with dip.</p>
+                        <button onclick="addToCart('Onion Rings', 350)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combos -->
+        <div id="combos">
+            <div class="category-header">
+                <h2>🎁 Combos</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500"
+                            alt="Couples Pack">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Couple's Pack</h3>
+                            <span class="price">KSh 1,500</span>
+                        </div>
+                        <p class="card-desc">2 Burgers + 2 Fries + 2 Sodas.</p>
+                        <button onclick="addToCart('Couple\'s Pack', 1500)" class="btn whatsapp-btn"
+                            style="width: 100%">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1541592397-5a12530c33a9?w=500" alt="Party Box">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Party Box</h3>
+                            <span class="price">KSh 2,000</span>
+                        </div>
+                        <p class="card-desc">10 Wings + Large Chips + 2L Soda.</p>
+                        <button onclick="addToCart('Party Box', 2000)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <div id="drinks">
+            <div class="category-header">
+                <h2>🥤 Drinks</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500" alt="Soda">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Soda 500ml</h3>
+                            <span class="price">KSh 100</span>
+                        </div>
+                        <p class="card-desc">Coke, Fanta, Sprite, Krest.</p>
+                        <button onclick="addToCart('Soda 500ml', 100)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500" alt="Milkshake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Milkshake</h3>
+                            <span class="price">KSh 350</span>
+                        </div>
+                        <p class="card-desc">Rich vanilla, chocolate, or strawberry shake.</p>
+                        <button onclick="addToCart('Milkshake', 350)" class="btn whatsapp-btn" style="width: 100%">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; 2026 FoodChapChap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToCategory(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+
+            // Update active class
+            document.querySelectorAll('.cat-link').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
