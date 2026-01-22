@@ -1,238 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      FoodChapChap | Fastest Food Delivery in Nairobi - Burgers, Chicken & Fries
+    </title>
+    <meta
+      name="description"
+      content="Order delicious fast food in Nairobi via WhatsApp. Fresh burgers, crispy chicken, masala chips, and combos delivered in minutes. No signup required. Fast, hot, and tasty!"
+    />
+    <meta
+      name="keywords"
+      content="fast food Nairobi, burger delivery Nairobi, chicken and chips, food delivery WhatsApp, masala chips, FoodChapChap, fast food Kenya"
+    />
+    <meta name="author" content="FoodChapChap" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://foodchapchap.netlify.app/" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FoodChapChap | Fastest Food Delivery in Nairobi - Burgers, Chicken & Fries</title>
-  <meta name="description"
-    content="Order delicious fast food in Nairobi via WhatsApp. Fresh burgers, crispy chicken, masala chips, and combos delivered in minutes. No signup required. Fast, hot, and tasty!" />
-  <meta name="keywords"
-    content="fast food Nairobi, burger delivery Nairobi, chicken and chips, food delivery WhatsApp, masala chips, FoodChapChap, fast food Kenya" />
-  <meta name="author" content="FoodChapChap" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://foodchapchap.netlify.app/" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://foodchapchap.netlify.app/" />
+    <meta
+      property="og:title"
+      content="FoodChapChap | Fastest Food Delivery in Nairobi"
+    />
+    <meta
+      property="og:description"
+      content="Craving a burger or crispy chicken? Order now via WhatsApp and get it delivered fast! No apps, no logins, just food."
+    />
+    <meta
+      property="og:image"
+      content="https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://foodchapchap.netlify.app/" />
-  <meta property="og:title" content="FoodChapChap | Fastest Food Delivery in Nairobi" />
-  <meta property="og:description"
-    content="Craving a burger or crispy chicken? Order now via WhatsApp and get it delivered fast! No apps, no logins, just food." />
-  <meta property="og:image" content="https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://foodchapchap.netlify.app/" />
+    <meta
+      property="twitter:title"
+      content="FoodChapChap | Fastest Food Delivery in Nairobi"
+    />
+    <meta
+      property="twitter:description"
+      content="Craving a burger or crispy chicken? Order now via WhatsApp and get it delivered fast! No apps, no logins, just food."
+    />
+    <meta
+      property="twitter:image"
+      content="https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png"
+    />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://foodchapchap.netlify.app/" />
-  <meta property="twitter:title" content="FoodChapChap | Fastest Food Delivery in Nairobi" />
-  <meta property="twitter:description"
-    content="Craving a burger or crispy chicken? Order now via WhatsApp and get it delivered fast! No apps, no logins, just food." />
-  <meta property="twitter:image" content="https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png" />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FastFoodRestaurant",
+        "name": "FoodChapChap",
+        "image": "https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png",
+        "@id": "https://foodchapchap.netlify.app",
+        "url": "https://foodchapchap.netlify.app",
+        "telephone": "+254758596269",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Westlands Road",
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.268,
+          "longitude": 36.805
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "22:00"
+        },
+        "servesCuisine": "Fast Food",
+        "priceRange": "KSh 100 - KSh 2000"
+      }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FastFoodRestaurant",
-    "name": "FoodChapChap",
-    "image": "https://foodchapchap.netlify.app/images/chapchap_crunch_burger.png",
-    "@id": "https://foodchapchap.netlify.app",
-    "url": "https://foodchapchap.netlify.app",
-    "telephone": "+254758596269",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Westlands Road",
-      "addressLocality": "Nairobi",
-      "addressCountry": "KE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -1.268,
-      "longitude": 36.805
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "10:00",
-      "closes": "22:00"
-    },
-    "servesCuisine": "Fast Food",
-    "priceRange": "KSh 100 - KSh 2000"
-  }
-  </script>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-    rel="stylesheet">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Styles -->
-  <link rel="stylesheet" href="./src/style.css" />
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-content">
-      <a href="index.html" class="logo">
-        <i class="fas fa-hamburger"></i> FoodChapChap
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="mobile-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Delicious Food, Delivered <span class="highlight">ChapChap</span> 🍔🔥</h1>
-      <p>Craving something good? Order your favorite fast food instantly on WhatsApp. No account needed. Just tap and
-        eat.</p>
-      <div class="hero-btns">
-        <a href="https://wa.me/254758596269?text=Hi%20FoodChapChap%20%F0%9F%91%8B%2C%20I%20want%20to%20order..."
-          class="btn whatsapp-btn">
-          <i class="fab fa-whatsapp"></i> Order on WhatsApp
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container nav-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-hamburger"></i> FoodChapChap
         </a>
-        <a href="menu.html" class="btn btn-secondary">
-          View Menu
-        </a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&q=80" alt="Delicious Burger Meal">
-      <div class="hero-overlay">
-        <div style="background: #e6f9ed; padding: 8px; border-radius: 50%;">
-          <span style="font-size: 1.5rem;">⚡</span>
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
-        <div>
-          <p style="font-weight: 700; margin: 0; font-size: 0.9rem;">Fast Delivery</p>
-          <p style="margin: 0; font-size: 0.8rem; color: #666;">Within 30 mins</p>
+        <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Best Sellers -->
-  <section class="section container">
-    <div class="section-title">
-      <h2>Fan Favorites 😋</h2>
-      <p>Most loved meals this week</p>
-    </div>
-
-    <div class="grid">
-      <!-- Item 1 -->
-      <div class="card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80"
-            alt="ChapChap Crunch Burger">
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>
+          Delicious Food, Delivered <span class="highlight">ChapChap</span> 🍔🔥
+        </h1>
+        <p>
+          Craving something good? Order your favorite fast food instantly on
+          WhatsApp. No account needed. Just tap and eat.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://wa.me/254758596269?text=Hi%20FoodChapChap%20%F0%9F%91%8B%2C%20I%20want%20to%20order..."
+            class="btn whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </a>
+          <a href="menu.html" class="btn btn-secondary"> View Menu </a>
         </div>
-        <div class="card-content">
-          <div class="card-title">
-            <h3>ChapChap Crunch Burger</h3>
-            <span class="price">KSh 450</span>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&q=80"
+          alt="Delicious Burger Meal"
+        />
+        <div class="hero-overlay">
+          <div style="background: #e6f9ed; padding: 8px; border-radius: 50%">
+            <span style="font-size: 1.5rem">⚡</span>
           </div>
-          <p class="card-desc">Crispy chicken fillet, cheese, lettuce, and secret sauce.</p>
-          <button onclick="addToCart('ChapChap Crunch Burger', 450)" class="btn whatsapp-btn" style="width: 100%">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&q=80" alt="Spicy Wings Combo">
-        </div>
-        <div class="card-content">
-          <div class="card-title">
-            <h3>Spicy Wings Combo</h3>
-            <span class="price">KSh 480</span>
-          </div>
-          <p class="card-desc">6 spicy wings + large fries + dipping sauce.</p>
-          <button onclick="addToCart('Spicy Wings Combo', 480)" class="btn whatsapp-btn" style="width: 100%">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80" alt="Cheesy Beef Burger">
-        </div>
-        <div class="card-content">
-          <div class="card-title">
-            <h3>Cheesy Beef Burger</h3>
-            <span class="price">KSh 500</span>
-          </div>
-          <p class="card-desc">Double beef patty, melted cheddar, pickles, and onion.</p>
-          <button onclick="addToCart('Cheesy Beef Burger', 500)" class="btn whatsapp-btn" style="width: 100%">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="menu.html" class="btn btn-primary">View Full Menu</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-col">
-          <h4>FoodChapChap</h4>
-          <p>Fast food, delivered fast. Serving Nairobi's best burgers and chicken since 2024.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <div>
+            <p style="font-weight: 700; margin: 0; font-size: 0.9rem">
+              Fast Delivery
+            </p>
+            <p style="margin: 0; font-size: 0.8rem; color: #666">
+              Within 30 mins
+            </p>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section container">
+      <div class="section-title">
+        <h2>Fan Favorites 😋</h2>
+        <p>Most loved meals this week</p>
+      </div>
+
+      <div class="grid">
+        <!-- Item 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80"
+              alt="ChapChap Crunch Burger"
+            />
+          </div>
+          <div class="card-content">
+            <div class="card-title">
+              <h3>ChapChap Crunch Burger</h3>
+              <span class="price">KSh 450</span>
+            </div>
+            <p class="card-desc">
+              Crispy chicken fillet, cheese, lettuce, and secret sauce.
+            </p>
+            <button
+              onclick="addToCart('ChapChap Crunch Burger', 450)"
+              class="btn whatsapp-btn"
+              style="width: 100%"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul class="footer-links">
-            <li><i class="fas fa-phone"></i> +254 758 596 269</li>
-            <li><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</li>
-            <li><i class="fas fa-clock"></i> Mon-Sun: 10am - 10pm</li>
-          </ul>
+
+        <!-- Item 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&q=80"
+              alt="Spicy Wings Combo"
+            />
+          </div>
+          <div class="card-content">
+            <div class="card-title">
+              <h3>Spicy Wings Combo</h3>
+              <span class="price">KSh 480</span>
+            </div>
+            <p class="card-desc">
+              6 spicy wings + large fries + dipping sauce.
+            </p>
+            <button
+              onclick="addToCart('Spicy Wings Combo', 480)"
+              class="btn whatsapp-btn"
+              style="width: 100%"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80"
+              alt="Cheesy Beef Burger"
+            />
+          </div>
+          <div class="card-content">
+            <div class="card-title">
+              <h3>Cheesy Beef Burger</h3>
+              <span class="price">KSh 500</span>
+            </div>
+            <p class="card-desc">
+              Double beef patty, melted cheddar, pickles, and onion.
+            </p>
+            <button
+              onclick="addToCart('Cheesy Beef Burger', 500)"
+              class="btn whatsapp-btn"
+              style="width: 100%"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
-      <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-        <p>&copy; 2026 FoodChapChap. All rights reserved.</p>
+
+      <div style="text-align: center; margin-top: 3rem">
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>FoodChapChap</h4>
+            <p>
+              Fast food, delivered fast. Serving Nairobi's best burgers and
+              chicken since 2024.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li><i class="fas fa-phone"></i> +254 758 596 269</li>
+              <li><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</li>
+              <li><i class="fas fa-clock"></i> Mon-Sun: 10am - 10pm</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          style="
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+          "
+        >
+          <p>&copy; 2026 FoodChapChap. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

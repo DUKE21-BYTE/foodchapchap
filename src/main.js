@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================= CART LOGIC =================
 
   let cart = JSON.parse(localStorage.getItem('foodChapChapCart')) || [];
-  const phoneNumber = "254758596269";
+  const phoneNumber = '254758596269';
 
   // Setup UI elements
   const body = document.body;
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Function to add item (Global so HTML onclicks can reach it)
-  window.addToCart = function (name, price) {
-    const existingItem = cart.find(item => item.name === name);
+  function addToCart(name, price) {
+    const existingItem = cart.find((item) => item.name === name);
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     saveCart();
     updateCartCount();
     showNotification(`${name} added!`);
-  };
+  }
+  window.addToCart = addToCart;
 
   // Helper: Save Cart
   function saveCart() {
@@ -119,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartCount.textContent = totalItems;
     if (totalItems > 0) {
       cartFab.style.transform = 'scale(1.1)';
-      setTimeout(() => cartFab.style.transform = 'scale(1)', 200);
+      setTimeout(() => (cartFab.style.transform = 'scale(1)'), 200);
     }
   }
 
@@ -133,12 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Helper: Render Cart
-  window.renderCart = function () {
+  function renderCart() {
     cartItemsContainer.innerHTML = '';
     let total = 0;
 
     if (cart.length === 0) {
-      cartItemsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">Your cart is empty.</p>';
+      cartItemsContainer.innerHTML =
+        '<p style="text-align: center; color: #666; padding: 2rem;">Your cart is empty.</p>';
       cartTotalSection.style.display = 'none';
       checkoutBtn.style.display = 'none';
       return;
@@ -167,10 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cartTotalValue.textContent = `KSh ${total.toLocaleString()}`;
     cartTotalSection.style.display = 'flex';
     checkoutBtn.style.display = 'flex';
-  };
+  }
+  window.renderCart = renderCart;
 
   // Helper: Change Quantity
-  window.changeQty = function (index, change) {
+  function changeQty(index, change) {
     if (cart[index].quantity === 1 && change === -1) {
       if (confirm('Remove this item?')) {
         cart.splice(index, 1);
@@ -181,7 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
     saveCart();
     updateCartCount();
     renderCart();
-  };
+  }
+  window.changeQty = changeQty;
 
   // Checkout
   checkoutBtn.addEventListener('click', () => {
@@ -190,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let message = `Hi FoodChapChap 👋\nI'd like to place an order:\n\n`;
     let total = 0;
 
-    cart.forEach(item => {
+    cart.forEach((item) => {
       message += `▪️ ${item.quantity}x ${item.name} @ KSh ${item.price}\n`;
       total += item.price * item.quantity;
     });
@@ -204,5 +208,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   updateCartCount();
 });
-
-

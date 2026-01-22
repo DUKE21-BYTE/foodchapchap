@@ -1,16 +1,16 @@
 :root {
-  --primary: #FF4500;
+  --primary: #ff4500;
   /* Appetizing Orange-Red */
   --primary-dark: #cc3700;
-  --secondary: #1D3557;
+  --secondary: #1d3557;
   /* Deep Navy */
-  --accent: #FFB703;
+  --accent: #ffb703;
   /* Warm Yellow */
-  --background: #F8F9FA;
-  --surface: #FFFFFF;
+  --background: #f8f9fa;
+  --surface: #ffffff;
   --text-main: #212529;
-  --text-light: #6C757D;
-  --success: #28A745;
+  --text-light: #6c757d;
+  --success: #28a745;
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -97,13 +97,13 @@ button,
 }
 
 .whatsapp-btn {
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp-btn:hover {
-  background-color: #128C7E;
+  background-color: #128c7e;
   transform: translateY(-2px);
 }
 
@@ -694,7 +694,6 @@ footer {
 }
 
 @keyframes bounce {
-
   0%,
   80%,
   100% {
